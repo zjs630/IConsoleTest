@@ -13,9 +13,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+//  Nil is not compatible with expected argument type 'CVaListPointer'
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.window = iConsoleWindow(frame: UIScreen.main.bounds)
+        
+        var number = "111"
+        let numberPointer = UnsafeMutableRawPointer(&number)
+
+        let x:CVaListPointer = CVaListPointer(_fromUnsafeMutablePointer: numberPointer)
+        iConsole.warn("test", args: x)
+//        [iConsole warn:@" [data]：%@","test" error:NULL]];
+
+
+        self.window?.rootViewController = ViewController()
+        self.window?.makeKeyAndVisible()
+        
+
         return true
     }
 

@@ -12,12 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        view.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+        
+        //所有的崩溃保存在Caches目录下
+        let path = NSHomeDirectory().appending("/Library/Caches")
+        print(path)
+        
+        let v = MyTestView()
+        v.testMethod() //调用此方法，3s后抛出异常
+        view.addSubview(v)
+        
     }
 
 

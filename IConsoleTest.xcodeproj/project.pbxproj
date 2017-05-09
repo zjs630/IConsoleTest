@@ -12,6 +12,9 @@
 		62EE60A61EC18C9400385483 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62EE60A41EC18C9400385483 /* Main.storyboard */; };
 		62EE60A81EC18C9400385483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62EE60A71EC18C9400385483 /* Assets.xcassets */; };
 		62EE60AB1EC18C9400385483 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62EE60A91EC18C9400385483 /* LaunchScreen.storyboard */; };
+		62EE60D61EC1BEE500385483 /* MyTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EE60D51EC1BEE500385483 /* MyTestView.m */; };
+		62EE60DE1EC1E4BC00385483 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EE60DA1EC1E4BC00385483 /* UncaughtExceptionHandler.m */; };
+		62EE60DF1EC1E4BC00385483 /* iConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EE60DD1EC1E4BC00385483 /* iConsole.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,13 @@
 		62EE60A71EC18C9400385483 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62EE60AA1EC18C9400385483 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62EE60AC1EC18C9400385483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62EE60BE1EC18DEB00385483 /* IconsoleTest-bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IconsoleTest-bridge-Header.h"; sourceTree = "<group>"; };
+		62EE60D41EC1BEE500385483 /* MyTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTestView.h; sourceTree = "<group>"; };
+		62EE60D51EC1BEE500385483 /* MyTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTestView.m; sourceTree = "<group>"; };
+		62EE60D91EC1E4BC00385483 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		62EE60DA1EC1E4BC00385483 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
+		62EE60DC1EC1E4BC00385483 /* iConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iConsole.h; sourceTree = "<group>"; };
+		62EE60DD1EC1E4BC00385483 /* iConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iConsole.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,45 @@
 		62EE609F1EC18C9400385483 /* IConsoleTest */ = {
 			isa = PBXGroup;
 			children = (
+				62EE60D71EC1E4BC00385483 /* iConsole */,
+				62EE60BE1EC18DEB00385483 /* IconsoleTest-bridge-Header.h */,
 				62EE60A01EC18C9400385483 /* AppDelegate.swift */,
 				62EE60A21EC18C9400385483 /* ViewController.swift */,
+				62EE60D41EC1BEE500385483 /* MyTestView.h */,
+				62EE60D51EC1BEE500385483 /* MyTestView.m */,
 				62EE60A41EC18C9400385483 /* Main.storyboard */,
 				62EE60A71EC18C9400385483 /* Assets.xcassets */,
 				62EE60A91EC18C9400385483 /* LaunchScreen.storyboard */,
 				62EE60AC1EC18C9400385483 /* Info.plist */,
 			);
 			path = IConsoleTest;
+			sourceTree = "<group>";
+		};
+		62EE60D71EC1E4BC00385483 /* iConsole */ = {
+			isa = PBXGroup;
+			children = (
+				62EE60D81EC1E4BC00385483 /* exceptionHandler */,
+				62EE60DB1EC1E4BC00385483 /* iConsole */,
+			);
+			path = iConsole;
+			sourceTree = "<group>";
+		};
+		62EE60D81EC1E4BC00385483 /* exceptionHandler */ = {
+			isa = PBXGroup;
+			children = (
+				62EE60D91EC1E4BC00385483 /* UncaughtExceptionHandler.h */,
+				62EE60DA1EC1E4BC00385483 /* UncaughtExceptionHandler.m */,
+			);
+			path = exceptionHandler;
+			sourceTree = "<group>";
+		};
+		62EE60DB1EC1E4BC00385483 /* iConsole */ = {
+			isa = PBXGroup;
+			children = (
+				62EE60DC1EC1E4BC00385483 /* iConsole.h */,
+				62EE60DD1EC1E4BC00385483 /* iConsole.m */,
+			);
+			path = iConsole;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +178,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				62EE60A31EC18C9400385483 /* ViewController.swift in Sources */,
+				62EE60DE1EC1E4BC00385483 /* UncaughtExceptionHandler.m in Sources */,
 				62EE60A11EC18C9400385483 /* AppDelegate.swift in Sources */,
+				62EE60DF1EC1E4BC00385483 /* iConsole.m in Sources */,
+				62EE60D61EC1BEE500385483 /* MyTestView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +308,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superstar.IConsoleTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iConsoleTest/IconsoleTest-bridge-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -276,6 +321,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.superstar.IConsoleTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iConsoleTest/IconsoleTest-bridge-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -299,6 +345,7 @@
 				62EE60B11EC18C9400385483 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
