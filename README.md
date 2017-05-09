@@ -25,3 +25,6 @@ iConsole 默认记录的日志条数是1000条. 如果日志记录到上限时,�
 [[iConsole sharedConsole] setMaxLogItems:40];
 
 _maxLogItems = 40; //change by zjs 原来是1000. 属性列表不适合存大量数据,侧重于实时性，没有必要缓存那么多。
+![image](snapshot.png)<br>
+<br>
+![image](error.png)<br>
